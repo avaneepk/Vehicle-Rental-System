@@ -1,0 +1,16 @@
+XJY-604,Hyundai Getz,O,0,45.00,R
+WYN-482,Ford Fiesta,O,0,40,A
+AJB-123,BMW mini,P,200,65.00,R
+BKV-943,Ford Ikon,P,150,60,R
+JMB-535,Ford Flex,O,0,50,A
+AFI-759,Toyota Yaris,O,0,40,A
+VGS-537,Volkswagon Golf,O,0,50,R
+JDY-427,Nissan Qashqai,O,0,55,A
+DGT-378,Kia Rio,O,0,40,A
+RTY-813,Toyota Corolla,O,0,50,A
+WRI-754,Mercedes S-Class,P,200,60,R
+HDB-248,Audi A6,P,170,65,A
+HGL-528,Volkswagon Polo,O,0,45,A
+CBV-267,Tesla Model 3,O,0,55,A
+YUT-368,Volvo XC40,P,250,60,A
+RHJ-646,Citroen C3,O,0,40,A
