@@ -14,6 +14,7 @@ class NumError(Exception):
 
 current_date = datetime.datetime.now().strftime("%Y/%m/%d %H:%M")
 
+# First option to display the list of vehicles
 def displayCars():
     try:
         with open("Vehicle.txt", "r") as file:
@@ -44,6 +45,7 @@ def displayCars():
         print("\n------ Please Enter only 'A' or 'R' ---------\n")
         main_menu()
 
+# Function to more new vehicles
 def addAnotherVehicle():
     add_another = input("Do you want to add another vehicle? Press 'Y' for yes and 'N' for no: ")
     if add_another == "Y":
@@ -54,6 +56,7 @@ def addAnotherVehicle():
         print("Please enter either 'Y' or 'N'.")
         addAnotherVehicle()
 
+# Function to originally add vehicle information
 def addVehicle():
     try:
         vehicle_id = input("Enter the vehicle ID: ")
@@ -98,6 +101,7 @@ def addVehicle():
         print("Enter only 'O' or 'P'.")
         addVehicle()
 
+# Function to delete vehicle information from the text file
 def deleteVehicle():
     try:
         vehicle_id = input("Enter the vehicle ID: ")
@@ -240,11 +244,13 @@ def rentVehicle():
         print("Please enter only the numbers mentioned above.")
         rentVehicle()
 
+# Function to check and calculate how much to charge the customers for renting vehicles
 def transact(vehicle_id, renter_id, return_date, start_odometer, end_odometer, kms_run, rent_charge):
     with open("Transactions.txt", "a") as file:
         file.write(f"\n{vehicle_id},{renter_id},{return_date},{start_odometer},{end_odometer},{kms_run},{rent_charge}")
     print(f"Car {vehicle_id} is returned.\n")
 
+# Function to let users return and stop the vehicle rent
 def rentComplete():
     try:
         vehicle_id = input("Enter the vehicle ID: ")
@@ -309,6 +315,7 @@ def rentComplete():
         print("Enter the odometer reading in number format and more than the initial reading.")
         rentComplete()
 
+# Function to check which vehicles are premium brands
 def vehicleChart():
     with open("Vehicle.txt", "r") as file:
         content = file.read().split("\n")
@@ -333,9 +340,11 @@ def vehicleChart():
     plt.show()
     main_menu()
 
+# Exit the system
 def exit():
     print("Thanks for using Car Rental System. Bye! Bye!")
 
+# Main menu for the system
 def main_menu():
     try:
         print("       Vehicle Rent Menu")
